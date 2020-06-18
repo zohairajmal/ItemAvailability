@@ -49,15 +49,15 @@ def my_main_function(password):
             # create an email message with just a subject line,
             msg = 'Subject: Case Available! https://www.amazon.com/dp/B07GNNXW4Z'
             # set the 'from' address,
-            fromaddr = 'zohairajmal1@gmail.com'
+            fromaddr = 'youremail@gmail.com'
             # set the 'to' addresses,
-            toaddrs  = ['z.ajmal@jacobs-university.de','zohairajmal1@gmail.com', 'A_THIRD_EMAIL_ADDRESS']
+            toaddrs  = ['example@gmail.com','example2@gmail.com', 'A_THIRD_EMAIL_ADDRESS']
             
             # setup the email server,
             server = smtplib.SMTP('smtp.gmail.com', 587)
             server.starttls()
             # add my account login name and password,
-            server.login("zohairajmal1@gmail.com", password)
+            server.login("youremail@gmail.com", password)
             
             # Print the email's contents
             print('From: ' + fromaddr)
@@ -75,7 +75,7 @@ def my_main_function(password):
             continue
 
 if __name__=='__main__':
-    
+    print("Enter Password for email")
     password = getpass()
     try:
         my_main_function(password)
